@@ -27,3 +27,37 @@ console.log(string.padStart(8, 'hi '));
 console.log(string.padEnd(15, ' Fucker'));
 console.log('food'.padEnd(12, ' ----'));
 
+
+
+
+// ASYNC Y AWAIT ---------------------------------
+
+const helloWorld = () => {
+    return new Promise((resolve, reject) => {
+        (false)
+            ? setTimeout(() => resolve('Hello World'), 3000)
+            : reject(new Error('test Error'))
+    })
+};
+
+const helloAsync = async () => {
+    const hello = await helloWorld();
+    console.log(hello);
+};
+
+helloAsync();
+
+
+
+// Forma correcta
+
+const anotherFunction = async () => {
+    try {
+        const hello = await helloWorld();
+        console.log(hello);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+anotherFunction();
