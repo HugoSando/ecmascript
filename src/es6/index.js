@@ -47,6 +47,32 @@ let person = {
 
 console.log(person.name, person.age, person.country);
 
-
+// es6
 let { name, age, country } = person;
 console.log(name, age, country);
+
+
+// Spread Operator
+
+let team1 = ['oscar', 'Julian', 'Ricardo'];
+let team2 = ['Valeria', 'Jessica', 'Camila'];
+// es6
+let education = ['David', ...team1, ...team2];
+
+console.log(education);
+
+
+// Var vs Let es asignacion global vs asignacion local
+{
+    var globalVar = 'Global Var';
+}
+
+{
+    let globalLet = 'Global Let';
+    console.log(globalLet);
+}
+
+console.log(globalVar);
+
+
+
