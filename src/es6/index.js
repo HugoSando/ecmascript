@@ -5,7 +5,7 @@ function newFunction(name, age, country) {
     console.log(name, age, country);
 }
 
-// es6
+// es6 DEFAULT PARAMS
 function newFunction2(name = 'oscar', age = 32, country = 'MX') {
     console.log(name, age, country);
 
